@@ -109,17 +109,29 @@ Turn off = set `enabled: false`. (Basic privacy only, not bank security.)
 
 ---
 
-## DEPLOY TO VERCEL
+## DEPLOY TO CLOUDFLARE PAGES (main)
 
-1. Run `npm run generate:photos` (so `public/photos` + data exist).
-2. Push project to GitHub.
-3. vercel.com → New Project → import repo.
-4. Framework: Vite. Build: `npm run build`. Output: `dist`.
-5. Deploy. Done.
+1. Run `npm run generate:photos` (so `public/photos` + data exist). Already done.
+2. Push to GitHub. Already done.
+3. dash.cloudflare.com → Workers & Pages → Create → Pages → Connect to Git → pick `Alice75thPhoto`.
+4. Settings:
+   - Framework preset: `Vite`
+   - Build command: `npm run build`
+   - Build output directory: `dist`
+   - (Root directory: leave blank)
+5. Save and Deploy. Done. You get a `*.pages.dev` link.
 
-(`vercel.json` already handles page links. Netlify works too — `_redirects` is included.)
+Notes:
+- `.nvmrc` pins Node 20. `_redirects` makes album links work. `_headers` caches photos fast.
+- Family passcode on Cloudflare: Pages → Settings → Variables → add `VITE_FAMILY_PASSCODE` = your code, AND set `passcode.enabled: true` in `src/config/site.js`, then redeploy.
+- Cloudflare Pages limits: 20,000 files + 25 MB per file. This project ≈ 1,645 files, biggest 0.5 MB. Fine.
+- Update later: `npm run generate:photos` → `git add -A` → `git commit -m "..."` → `git push`. Cloudflare auto-rebuilds.
 
-Note: original source folders (`ORIG`, etc.) are git-ignored on purpose. Only the optimized `public/photos` ships. If your `public/photos` is very large, use a paid plan or host images on a CDN.
+## DEPLOY TO VERCEL (alt)
+
+vercel.com → New Project → import repo → Framework Vite → Build `npm run build` → Output `dist`. (`vercel.json` included.) Note: Vercel free tier has tighter size limits — Cloudflare is easier for big photo sets.
+
+Original source folders (`ORIG`, etc.) are git-ignored on purpose. Only the optimized `public/photos` ships.
 
 ---
 
