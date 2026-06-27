@@ -1,0 +1,29 @@
+[
+  {
+    "id": "may-17-alice-75",
+    "name": "May 17 Alice @75",
+    "folderPath": "May 17 Alice @75",
+    "cover": "/photos/thumbnails/may-17-alice-75/70230ddcde15.webp",
+    "coverSrc": "/photos/large/may-17-alice-75/70230ddcde15.webp",
+    "count": 595,
+    "blurb": "Memories from May 17 Alice @75"
+  },
+  {
+    "id": "orig",
+    "name": "Photo booth",
+    "folderPath": "ORIG",
+    "cover": "/photos/thumbnails/orig/e74456ec1509.webp",
+    "coverSrc": "/photos/large/orig/e74456ec1509.webp",
+    "count": 181,
+    "blurb": "Memories from Photo booth"
+  },
+  {
+    "id": "print",
+    "name": "Photo booth Print",
+    "folderPath": "print",
+    "cover": "/photos/thumbnails/print/2bcee5d5279d.webp",
+    "coverSrc": "/photos/large/print/2bcee5d5279d.webp",
+    "count": 44,
+    "blurb": "Memories from Photo booth Print"
+  }
+]

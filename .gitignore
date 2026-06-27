@@ -1,0 +1,17 @@
+node_modules
+dist
+.vercel
+*.log
+.env
+.env.local
+.DS_Store
+Thumbs.db
+
+# Original photo source folders — heavy, keep them LOCAL (not in git).
+# The website serves the generated copies in /public/photos instead.
+/ORIG
+/print
+/May 17 Alice @75
+
+# NOTE: public/photos (generated thumbnails + HD) is intentionally NOT ignored,
+# because Vercel/Netlify need it to display the gallery.
