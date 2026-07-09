@@ -135,6 +135,17 @@ Original source folders (`ORIG`, etc.) are git-ignored on purpose. Only the opti
 
 ---
 
+## HIGHLIGHT VIDEO
+
+- Landing page plays a highlight video (muted autoplay, loop — required by browsers).
+- Tap the speaker icon to turn sound on. Pauses automatically when scrolled off screen.
+- File: `public/video/highlight.mp4` (compressed copy, ~18MB, 720p).
+- Your original `videoHighlight.mp4` (580MB, 4K) is untouched and git-ignored — never uploaded.
+- Replace the video: put a new file at `public/video/highlight.mp4` (keep it under ~20MB for fast loading; Cloudflare Pages rejects files over 25MB).
+- Replace the poster image: `public/video/highlight-poster.webp` (shown before the video loads).
+
+---
+
 ## FILES THAT MATTER
 
 - `gallery.config.js` — scanner settings (sizes, duplicates, downloads)

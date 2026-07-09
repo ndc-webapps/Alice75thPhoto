@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import HeroSection from "../components/HeroSection.jsx";
+import HighlightVideo from "../components/HighlightVideo.jsx";
 import AlbumBrowser from "../components/AlbumBrowser.jsx";
 import EmptyState from "../components/EmptyState.jsx";
 import { hasPhotos, allPhotos, albums } from "../utils/photos.js";
@@ -31,6 +32,8 @@ export default function Home() {
           <Stat value="75" label="Years of Love" />
         </div>
       </section>
+
+      <HighlightVideo />
 
       <AlbumBrowser />
 

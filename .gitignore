@@ -15,3 +15,8 @@ Thumbs.db
 
 # NOTE: public/photos (generated thumbnails + HD) is intentionally NOT ignored,
 # because Vercel/Netlify need it to display the gallery.
+
+# Original 4K source video — 580MB, way over GitHub's 100MB file limit.
+# The compressed web copy lives in public/video/ instead (IS committed).
+/videoHighlight.mp4
+ffmpeg2pass-*.log*
